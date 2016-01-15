@@ -1,0 +1,447 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/rScore"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textSize="32dp"
+            android:textColor="#ff000000"
+            android:layout_toStartOf="@+id/tScore" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score:"
+            android:id="@+id/tScore"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:autoText="false"
+            android:textColor="#ff000000"
+            android:textSize="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/bScore"
+            android:textSize="32dp"
+            android:textColor="#ff000000"
+            android:textAlignment="center"
+            android:layout_above="@+id/imageView3"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_below="@+id/rScore"
+            android:layout_alignParentStart="true"
+            android:background="#ffff0000"
+            android:minWidth="150dp"
+            android:minHeight="20dp"
+            android:layout_alignEnd="@+id/imageView3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_below="@+id/bScore"
+            android:layout_alignParentEnd="true"
+            android:minHeight="20dp"
+            android:minWidth="150dp"
+            android:background="#ff0000ff"
+            android:layout_toEndOf="@+id/imageView3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:layout_below="@+id/tScore"
+            android:layout_centerHorizontal="true"
+            android:minWidth="0dp"
+            android:minHeight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Goal"
+            android:id="@+id/tHighGoal"
+            android:autoText="false"
+            android:textColor="#ff000000"
+            android:textSize="32dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:onClick="update" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rHighGoal"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/tHighGoal"
+            android:paddingTop="5dp"
+            android:text="0"
+            android:phoneNumber="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bHighGoal"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/tHighGoal"
+            android:paddingTop="5dp"
+            android:onClick="update"
+            android:text="0"
+            android:phoneNumber="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:id="@+id/update"
+            android:onClick="update"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mid Goal"
+            android:id="@+id/tMidGoal"
+            android:autoText="false"
+            android:textColor="#ff000000"
+            android:textSize="32dp"
+            android:paddingTop="5dp"
+            android:onClick="update"
+            android:layout_below="@+id/tHighGoal"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rMidGoal"
+            android:paddingTop="5dp"
+            android:layout_alignTop="@+id/tMidGoal"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/tMidGoal"
+            android:text="0"
+            android:phoneNumber="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bMidGoal"
+            android:paddingTop="5dp"
+            android:onClick="update"
+            android:layout_alignTop="@+id/tMidGoal"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/bHighGoal"
+            android:text="0"
+            android:phoneNumber="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Goal"
+            android:id="@+id/tLowGoal"
+            android:autoText="false"
+            android:textColor="#ff000000"
+            android:textSize="32dp"
+            android:paddingTop="5dp"
+            android:onClick="update"
+            android:layout_below="@+id/tMidGoal"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rLowGoal"
+            android:paddingTop="5dp"
+            android:layout_alignTop="@+id/tLowGoal"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/tLowGoal"
+            android:text="0"
+            android:phoneNumber="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bLowGoal"
+            android:paddingTop="5dp"
+            android:layout_alignTop="@+id/tLowGoal"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/tLowGoal"
+            android:text="0"
+            android:phoneNumber="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hang"
+            android:id="@+id/tHang"
+            android:autoText="false"
+            android:textColor="#ff000000"
+            android:textSize="32dp"
+            android:paddingTop="0dp"
+            android:onClick="update"
+            android:layout_below="@+id/rLowGoal"
+            android:layout_centerHorizontal="true" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Zone"
+            android:id="@+id/tHigh"
+            android:autoText="false"
+            android:textColor="#ff000000"
+            android:textSize="32dp"
+            android:paddingTop="0dp"
+            android:onClick="update"
+        android:layout_below="@+id/tHang"
+        android:layout_alignStart="@+id/textView" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:id="@+id/space7"
+            android:layout_alignBottom="@+id/tHigh" />
+
+    <Space
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:id="@+id/space8"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/bScore" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rHang"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rLowGoal"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tMidGoal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bHang"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/tLowGoal"
+        android:layout_alignEnd="@+id/bLowGoal"
+        android:layout_toEndOf="@+id/tMidGoal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rHighZone"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rHang"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tHigh" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bHighZone"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/tHang"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/tHigh" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mid Zone"
+        android:id="@+id/tMidZone"
+        android:autoText="false"
+        android:textColor="#ff000000"
+        android:textSize="32dp"
+        android:paddingTop="0dp"
+        android:onClick="update"
+        android:layout_below="@+id/bHighZone"
+        android:layout_alignStart="@+id/tLowGoal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rMidZone"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rHighZone"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tMidGoal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bMidZone"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_above="@+id/bLowZone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/bMidGoal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Low Zone"
+        android:id="@+id/textView"
+        android:autoText="false"
+        android:textColor="#ff000000"
+        android:textSize="32dp"
+        android:paddingTop="0dp"
+        android:onClick="update"
+        android:layout_below="@+id/tMidZone"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rLowZone"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rMidZone"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/rMidZone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bLowZone"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rMidZone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/bMidZone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partial"
+        android:id="@+id/tPart"
+        android:autoText="false"
+        android:textColor="#ff000000"
+        android:textSize="32dp"
+        android:paddingTop="0dp"
+        android:onClick="update"
+        android:layout_below="@+id/rLowZone"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rPart"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rLowZone"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/update" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bPart"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_alignTop="@+id/tPart"
+        android:layout_alignEnd="@+id/bLowZone"
+        android:layout_toEndOf="@+id/tPart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zip Liners"
+        android:id="@+id/tZip"
+        android:autoText="false"
+        android:textColor="#ff000000"
+        android:textSize="32dp"
+        android:paddingTop="0dp"
+        android:onClick="update"
+        android:layout_below="@+id/tPart"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rZip"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/tPart"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tMidGoal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bZip"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/tPart"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/bLowZone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Climbers"
+        android:id="@+id/tClimb"
+        android:autoText="false"
+        android:textColor="#ff000000"
+        android:textSize="32dp"
+        android:paddingTop="0dp"
+        android:onClick="update"
+        android:layout_below="@+id/rZip"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rClimb"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/rZip"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/tClimb" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bClimb"
+        android:paddingTop="5dp"
+        android:text="0"
+        android:phoneNumber="true"
+        android:layout_below="@+id/bZip"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/tClimb" />
+
+
+</RelativeLayout>
